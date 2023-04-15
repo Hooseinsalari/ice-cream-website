@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --main-color: #736454;
+  --primary-color: #eff1f3;
+  --bg-color: #f6f8fb;
+  --hover: #5a4d3e;
+  --black: #222;
+  --white: #fff;
+  --border: 0.1rem solid #aaa;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+/* ------------ Navbar ------------ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 3.5rem;
+}
+
+.nav-hamburger {
+  display: none;
+}
+
+.nav-hamburger span {
+  transition: 0.4s;
+}
+
+.nav-hamburger.transform span:nth-child(2) {
+  transform: translateX(200%);
+  opacity: 0;
+}
+
+.nav-hamburger.transform span:nth-child(1) {
+  transform: rotate(308deg) translateX(-10px);
+}
+
+.nav-hamburger.transform span:nth-child(3) {
+  transform: rotate(49deg) translateX(-6px);
+}
+
+.line {
+  display: block;
+  width: 1.4rem;
+  height: 2px;
+  background-color: var(--black);
+  margin: 0.3rem auto;
+}
+
+.nav-icon i {
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+
+.nav-icon span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.nav-list li a {
+  color: var(--black);
+  font-size: 1.2rem;
+  margin: 0 1.3rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding-bottom: 2px;
+}
+
+.nav-list li a:hover {
+  border-bottom: 1px solid var(--black);
+}
+
+/* ------------ responsive ------------ */
+@media (max-width: 768px) {
+  /* navbar */
+  .navbar {
+    position: relative;
+  }
+
+  .nav-hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 1.3rem;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 50%;
+    transform: translateX(100%);
+    background-color: var(--primary-color);
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 0;
+    justify-content: flex-start;
+  }
+
+  .nav-bg {
+    content: "";
+    width: 0;
+    display: block;
+    background-color: #14141438;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+
+  .nav-list li a {
+    margin: 1rem auto;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 425px) {
+  /* navbar */
+  .navbar {
+    padding: 1.5rem 2.2rem;
+  }
+
+  .nav-list {
+    width: 70%;
+  }
+}
