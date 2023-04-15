@@ -47,11 +47,11 @@
 }
 
 .nav-hamburger.transform span:nth-child(1) {
-  transform: rotate(308deg) translateX(-10px);
+  transform: rotate(314deg) translateX(-11px) translateY(0px);
 }
 
 .nav-hamburger.transform span:nth-child(3) {
-  transform: rotate(49deg) translateX(-6px);
+  transform: rotate(44deg) translateX(-8px);
 }
 
 .line {
