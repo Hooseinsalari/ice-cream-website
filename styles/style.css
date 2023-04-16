@@ -239,6 +239,62 @@ section {
   color: var(--main-color);
 }
 
+/* ------------- menu ------------- */
+.menu {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.menu-title {
+  font-size: 2.8rem;
+  color: var(--main-color);
+}
+
+.menu-items {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  align-items: center;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.item {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.item-img img {
+  width: 100%;
+  height: auto;
+}
+
+.item-name h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  color: var(--main-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.item-desc p {
+  line-height: 1.8rem;
+  color: var(--main-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.discount-price {
+  font-size: 1.5rem;
+  color: var(--hover);
+}
+
+.main-price {
+  color: var(--main-color);
+  text-decoration: line-through;
+
+}
+
 /*! ------------ responsive ------------ */
 @media (max-width: 768px) {
   section {
