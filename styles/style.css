@@ -39,6 +39,10 @@ section {
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   padding: 1.5rem 3.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .nav-hamburger {
@@ -116,12 +120,13 @@ section {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: 4.5rem;
   transition: 0.4s ease;
 }
 
 .home-content {
   color: var(--hover);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   display: flex;
   align-items: flex-start;
@@ -175,12 +180,12 @@ section {
 }
 
 .next-btn {
-  top: 40%;
+  top: 50%;
   right: 0;
 }
 
 .prev-btn {
-  top: 40%;
+  top: 50%;
   left: 0;
 }
 
@@ -241,9 +246,6 @@ section {
   }
 
   /* navbar */
-  .navbar {
-    position: relative;
-  }
 
   .nav-hamburger {
     display: block;
@@ -325,7 +327,7 @@ section {
   /* Home */
   .home-content {
     margin: auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .home-content button {
