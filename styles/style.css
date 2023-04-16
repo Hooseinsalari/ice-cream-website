@@ -93,6 +93,89 @@
   border-bottom: 1px solid var(--black);
 }
 
+/* ------------ Home ------------ */
+.home {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+
+.home-slide {
+  background: url("../images/header-1.png");
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: 0.4s ease;
+}
+
+.home-content {
+  color: var(--hover);
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin-left: 4rem;
+}
+
+.home-content h1 {
+  text-transform: uppercase;
+}
+
+.home-content button {
+  margin: 0.5rem auto;
+  padding: 0.7rem 1rem;
+  background-color: var(--main-color);
+  font-size: 1.3rem;
+  border: none;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.home-content button:hover {
+  cursor: pointer;
+  background-color: var(--hover);
+}
+
+.next-btn,
+.prev-btn {
+  position: absolute;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  display: inline;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: 111;
+}
+
+.next-btn:hover {
+  transform: translateX(2px);
+}
+
+.prev-btn:hover {
+  transform: translateX(-2px);
+}
+
+.next-btn {
+  top: 40%;
+  right: 0;
+}
+
+.prev-btn {
+  top: 40%;
+  left: 0;
+}
+
 /* ------------ responsive ------------ */
 @media (max-width: 768px) {
   /* navbar */
@@ -132,11 +215,21 @@
     right: 0;
     bottom: 0;
     transition: 0.4s;
+    z-index: 500;
   }
 
   .nav-list li a {
     margin: 1rem auto;
     display: inline-block;
+  }
+
+  /* Home */
+  .home-content {
+    font-size: 1.3rem;
+  }
+
+  .home-content button {
+    font-size: 1rem;
   }
 }
 
@@ -148,5 +241,22 @@
 
   .nav-list {
     width: 70%;
+  }
+
+  /* Home */
+  .home-content {
+    margin: auto;
+    font-size: 1.2rem;
+  }
+
+  .home-content button {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .next-btn,
+  .prev-btn {
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
   }
 }
