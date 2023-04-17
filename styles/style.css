@@ -359,6 +359,72 @@ section {
   opacity: 1;
 }
 
+/* ------------- Reviews ------------- */
+.reviews {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.reviews-title {
+  font-size: 2.8rem;
+  color: var(--main-color);
+}
+
+.reviews-box {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.comment {
+  background-color: var(--primary-color);
+  width: 22rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+  height: 16rem;
+  border-radius: 10px;
+}
+
+.comment-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.comment-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.comment-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-name {
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+  color: var(--main-color);
+}
+
+.comment-score {
+  color: rgb(240, 184, 40);
+}
+
+.comment-content {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
 /*! ------------ responsive ------------ */
 @media (max-width: 768px) {
   section {
@@ -465,5 +531,22 @@ section {
   /* Gallery */
   .gallery-container {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  /* Reveiws */
+  .comment {
+    width: 18rem;
+    
+  }
+
+  .comment-name {
+    font-size: 1.2rem;
+  }
+  
+  .comment-content {
+    font-size: 1.1rem;
+    text-align: left;
+    margin-top: 1.5rem;
+    font-weight: 500;
   }
 }
