@@ -143,11 +143,10 @@ section {
 
 .home-content h1 {
   text-transform: uppercase;
-  /* animation: slideAnimation 0.5s alternate; */
 }
 
 .home-content button {
-  margin: 0.5rem auto;
+  margin: 1.5rem auto;
   padding: 0.7rem 1rem;
   background-color: var(--main-color);
   font-size: 1.3rem;

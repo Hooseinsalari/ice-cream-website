@@ -38,10 +38,10 @@ function nextHomeBackgroundHandler() {
   slideNumber++;
 
   homeElements.forEach((elm) => {
-    elm.style.animation = "slideAnimation 0.5s alternate"
+    elm.style.animation = "slideAnimation 0.4s alternate"
     setTimeout(function(){
       elm.style.animation = '';
-    }, 200);
+    }, 400);
   })
 
 
@@ -56,10 +56,10 @@ function prevHomeBackgroundHandler() {
   slideNumber--;
 
   homeElements.forEach((elm) => {
-    elm.style.animation = "slideAnimation 0.5s alternate"
+    elm.style.animation = "slideAnimation 0.4s alternate"
     setTimeout(function(){
       elm.style.animation = '';
-    }, 200);
+    }, 400);
   })
 
   if (slideNumber === 0) {
