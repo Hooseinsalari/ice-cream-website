@@ -92,7 +92,7 @@ section {
   transition: 0.5s;
 }
 
-.nav-list li a {
+.nav-list li .nav-link {
   color: var(--black);
   font-size: 1.2rem;
   margin: 0 1.3rem;
@@ -101,7 +101,11 @@ section {
   padding-bottom: 2px;
 }
 
-.nav-list li a:hover {
+.nav-list li .nav-link:hover {
+  border-bottom: 1px solid var(--black);
+}
+
+.nav-list li .nav-link.active {
   border-bottom: 1px solid var(--black);
 }
 

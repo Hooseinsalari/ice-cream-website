@@ -6,6 +6,7 @@ const navBg = $.querySelector(".nav-bg");
 const slide = $.querySelector(".home-slide");
 const nextBtn = $.querySelector(".next-btn");
 const prevBtn = $.querySelector(".prev-btn");
+const navLinks = $.querySelectorAll(".nav-link");
 
 const bgImagesUrl = [
   "../images/header-1.png",
@@ -50,6 +51,15 @@ function prevHomeBackgroundHandler() {
 
   slide.style.background = `url(${bgImagesUrl[slideNumber - 1]})`;
 }
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    link.classList.add("active");
+  });
+});
 
 navHamburger.addEventListener("click", hamburgerMenuHandler);
 nextBtn.addEventListener("click", nextHomeBackgroundHandler);
