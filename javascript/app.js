@@ -7,6 +7,8 @@ const slide = $.querySelector(".home-slide");
 const nextBtn = $.querySelector(".next-btn");
 const prevBtn = $.querySelector(".prev-btn");
 const navLinks = $.querySelectorAll(".nav-link");
+// add animation to these elms when change home bg
+const homeElements = $.querySelectorAll(".home-content h1, .home-content button")
 
 const bgImagesUrl = [
   "../images/header-1.png",
@@ -35,6 +37,14 @@ function hamburgerMenuHandler() {
 function nextHomeBackgroundHandler() {
   slideNumber++;
 
+  homeElements.forEach((elm) => {
+    elm.style.animation = "slideAnimation 0.5s alternate"
+    setTimeout(function(){
+      elm.style.animation = '';
+    }, 200);
+  })
+
+
   if (slideNumber > bgImagesUrl.length) {
     slideNumber = 1;
   }
@@ -44,6 +54,13 @@ function nextHomeBackgroundHandler() {
 
 function prevHomeBackgroundHandler() {
   slideNumber--;
+
+  homeElements.forEach((elm) => {
+    elm.style.animation = "slideAnimation 0.5s alternate"
+    setTimeout(function(){
+      elm.style.animation = '';
+    }, 200);
+  })
 
   if (slideNumber === 0) {
     slideNumber = bgImagesUrl.length;

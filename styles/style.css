@@ -119,13 +119,13 @@ section {
 .home-slide {
   background: url("../images/header-1.png");
   background-size: cover !important;
-  background-position: center !important;
+  background-position: center right 20% !important;
   background-repeat: no-repeat !important;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 4.5rem;
-  transition: 0.4s ease;
+  transition: 0.5s ease;
 }
 
 .home-content {
@@ -143,6 +143,7 @@ section {
 
 .home-content h1 {
   text-transform: uppercase;
+  /* animation: slideAnimation 0.5s alternate; */
 }
 
 .home-content button {
@@ -191,6 +192,17 @@ section {
 .prev-btn {
   top: 50%;
   left: 0;
+}
+
+@keyframes slideAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ------------- About ------------- */
@@ -387,7 +399,7 @@ section {
   background-color: var(--primary-color);
   width: 22rem;
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 16rem;
   border-radius: 10px;
 }
@@ -457,7 +469,8 @@ section {
   gap: 1.5rem;
 }
 
-.form-left, .form-right {
+.form-left,
+.form-right {
   width: 50%;
 }
 
@@ -470,7 +483,8 @@ section {
   margin-top: 1rem;
 }
 
-.input-field label, .form-bottom label {
+.input-field label,
+.form-bottom label {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -553,7 +567,8 @@ section {
   margin-bottom: 0.8rem;
 }
 
-.social-items p , .social-items a {
+.social-items p,
+.social-items a {
   color: var(--main-color);
   font-weight: 500;
   margin-top: 0.8rem;
@@ -640,6 +655,11 @@ section {
     font-size: 1.3rem;
   }
 
+  .home-content h1 {
+    color: var(--primary-color);
+    text-shadow: 0 0px 12px rgba(0, 0, 0, 0.9);
+  }
+
   .home-content button {
     font-size: 1rem;
   }
@@ -666,8 +686,9 @@ section {
   .form-top {
     flex-direction: column;
   }
-  
-  .form-left, .form-right {
+
+  .form-left,
+  .form-right {
     width: 100%;
   }
 }
@@ -707,13 +728,12 @@ section {
   /* Reveiws */
   .comment {
     width: 18rem;
-    
   }
 
   .comment-name {
     font-size: 1.2rem;
   }
-  
+
   .comment-content {
     font-size: 1.1rem;
     text-align: left;
