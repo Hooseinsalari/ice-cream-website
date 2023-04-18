@@ -518,6 +518,71 @@ section {
   background-color: var(--hover);
 }
 
+/* ------------- Footer ------------ */
+.footer {
+  margin-top: 5rem;
+  width: 100%;
+  background: url("../images/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem 1rem;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-items {
+  margin: 2rem 2rem;
+}
+
+.social-items i {
+  background-color: var(--main-color);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+}
+
+.social-items p , .social-items a {
+  color: var(--main-color);
+  font-weight: 500;
+  margin-top: 0.8rem;
+  display: inline-block;
+}
+
+.share {
+  border-bottom: 1px solid rgba(115, 100, 84, 0.443);
+  margin: 4rem 0 0;
+  padding-bottom: 5rem;
+}
+
+.share i {
+  margin: 0 1rem 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--primary-color);
+  width: 4rem;
+  height: 4rem;
+  padding-top: 1.2rem;
+  cursor: pointer;
+}
+
+.footer-sign {
+  margin-top: 3rem;
+  color: var(--main-color);
+}
+
+.footer-sign i {
+  color: red;
+}
+
 /*! ------------ responsive ------------ */
 @media (max-width: 768px) {
   section {
